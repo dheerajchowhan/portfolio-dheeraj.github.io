@@ -31,7 +31,7 @@ const Nav = () => {
             <BiUser />
           </Link>
           <Link
-            to="services"
+            to="education"
             activeClass="active"
             smooth={true}
             spy={true}
@@ -40,7 +40,7 @@ const Nav = () => {
             <BsClipboardData />
           </Link>
           <Link
-            to="work"
+            to="skills"
             activeClass="active"
             smooth={true}
             spy={true}
