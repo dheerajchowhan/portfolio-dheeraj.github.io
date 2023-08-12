@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Nav from './components/Nav';
 import About from './components/About';
 import Contact from './components/Contact';
-import Education from './components/services';
+import Education from './components/Services';
 import Skills from './components/Work';
 
 const App = () => {
