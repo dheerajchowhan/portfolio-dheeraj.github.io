@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  # Development service for the React portfolio app
+  portfolio-dev:
+    image: node:18-alpine
+    container_name: portfolio-dev
+    working_dir: /app
+    
+    # Enable hot-reloading by mounting the current directory
+    volumes:
+      - ./:/app
+      # Prevent node_modules from being overwritten by the host
+      - /app/node_modules
+    
+    # Map container's port 3000 to host's port 3000
+    ports:
+      - "3000:3000"
+    
+    # Override the default Docker container command
+    command: >
+      sh -c "npm install && npm start"
+    
+    # Set environment variables required for React development server
+    environment:
+      - NODE_ENV=development
+      # Allow React to detect the host machine's IP and be accessible outside the container
+      - CHOKIDAR_USEPOLLING=true
+      - WDS_SOCKET_HOST=0.0.0.0
+      - REACT_APP_ENV=development
+    
+    # Enable interactive terminal for better logging
+    tty: true
+    stdin_open: true
+
+# =====================================
+# INSTRUCTIONS:
+# =====================================
+# Start development environment:
+#   docker-compose up --build
+#
+# Access the development server:
+#   http://localhost:3000
+#
+# Stop and remove containers:
+#   docker-compose down
+
