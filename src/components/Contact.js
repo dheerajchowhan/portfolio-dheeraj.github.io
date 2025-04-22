@@ -1,7 +1,7 @@
 import React,{useRef,useState} from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
-import  emailjs, { send } from '@emailjs/browser';
+import  emailjs from '@emailjs/browser';
 
 const Result = () =>{
   return(
