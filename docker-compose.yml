@@ -15,7 +15,7 @@ services:
     
     # Map container's port 3000 to host's port 3000
     ports:
-      - "3000:3000"
+      - "3001:3001"
     
     # Override the default Docker container command
     command: >
@@ -40,7 +40,7 @@ services:
 #   docker-compose up --build
 #
 # Access the development server:
-#   http://localhost:3000
+#   http://localhost:3001
 #
 # Stop and remove containers:
 #   docker-compose down
